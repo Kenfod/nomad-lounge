@@ -80,19 +80,18 @@ function SignupForm() {
       </FormRow>
 
       <FormRow>
-        {/* type is an HTML attribute! */}
-        <Button
-          $variation="secondary"
-          type="reset"
-          disabled={isLoading}
-          // onClick={(e) => {
-          //   e.preventDefault();
-          //   reset();
-          // }}
-        >
-          Cancel
-        </Button>
-        <Button disabled={isLoading}>Create new user</Button>
+        <div>
+          {/* type is an HTML attribute! */}
+          <Button
+            $variation="secondary"
+            type="reset"
+            disabled={isLoading}
+            onClick={reset}
+          >
+            Cancel
+          </Button>
+          <Button disabled={isLoading}>Create new user</Button>
+        </div>
       </FormRow>
     </Form>
   );
