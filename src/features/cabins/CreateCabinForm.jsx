@@ -6,6 +6,7 @@ import Button from "../../ui/Button";
 import FileInput from "../../ui/FileInput";
 import Textarea from "../../ui/Textarea";
 import FormRow from "../../ui/FormRow";
+import ButtonGroup from "../../ui/ButtonGroup";
 
 import { useCreateCabin } from "./useCreateCabin";
 import { useEditCabin } from "./useEditCabin";
@@ -140,17 +141,20 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       </FormRow>
 
       <FormRow>
-        {/* type is an HTML attribute! */}
-        <Button
-          $variation="secondary"
-          type="reset"
-          onClick={() => onCloseModal?.()}
-        >
-          Cancel
-        </Button>
-        <Button disabled={isWorking}>
-          {isEditSession ? "Edit cabin" : "Create new cabin"}
-        </Button>
+        <ButtonGroup>
+          {/* type is an HTML attribute! */}
+          <Button
+            $variation="secondary"
+            type="reset"
+            onClick={() => onCloseModal?.()}
+          >
+            Cancel
+          </Button>
+
+          <Button disabled={isWorking}>
+            {isEditSession ? "Edit cabin" : "Create new cabin"}
+          </Button>
+        </ButtonGroup>
       </FormRow>
     </Form>
   );

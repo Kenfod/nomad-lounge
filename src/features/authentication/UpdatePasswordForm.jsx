@@ -3,6 +3,7 @@ import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import FormRow from "../../ui/FormRow";
 import Input from "../../ui/Input";
+import ButtonGroup from "../../ui/ButtonGroup";
 
 import { useUpdateUser } from "./useUpdateUser";
 
@@ -54,13 +55,13 @@ function UpdatePasswordForm() {
         />
       </FormRow>
       <FormRow>
-        <div>
+        <ButtonGroup>
           <Button onClick={reset} type="reset" $variation="secondary">
             Cancel
           </Button>
 
           <Button disabled={isUpdating}>Update password</Button>
-        </div>
+        </ButtonGroup>
       </FormRow>
     </Form>
   );

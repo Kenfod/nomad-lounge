@@ -3,6 +3,7 @@ import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import FormRow from "../../ui/FormRow";
 import Input from "../../ui/Input";
+import ButtonGroup from "../../ui/ButtonGroup";
 import { useSignup } from "./useSignup";
 
 // Email regex: /\S+@\S+\.\S+/
@@ -80,7 +81,7 @@ function SignupForm() {
       </FormRow>
 
       <FormRow>
-        <div>
+        <ButtonGroup>
           {/* type is an HTML attribute! */}
           <Button
             $variation="secondary"
@@ -90,8 +91,9 @@ function SignupForm() {
           >
             Cancel
           </Button>
+
           <Button disabled={isLoading}>Create new user</Button>
-        </div>
+        </ButtonGroup>
       </FormRow>
     </Form>
   );

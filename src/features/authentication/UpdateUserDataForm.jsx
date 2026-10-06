@@ -5,6 +5,7 @@ import FileInput from "../../ui/FileInput";
 import Form from "../../ui/Form";
 import FormRow from "../../ui/FormRow";
 import Input from "../../ui/Input";
+import ButtonGroup from "../../ui/ButtonGroup";
 
 import { useUser } from "./useUser";
 import { useUpdateUser } from "./useUpdateUser";
@@ -66,8 +67,9 @@ function UpdateUserDataForm() {
           disabled={isUpdating}
         />
       </FormRow>
+
       <FormRow>
-        <div>
+        <ButtonGroup>
           <Button
             type="reset"
             $variation="secondary"
@@ -78,7 +80,7 @@ function UpdateUserDataForm() {
           </Button>
 
           <Button disabled={isUpdating}>Update account</Button>
-        </div>
+        </ButtonGroup>
       </FormRow>
     </Form>
   );
